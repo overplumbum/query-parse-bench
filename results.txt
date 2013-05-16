@@ -4,6 +4,12 @@ real	0m0.556s
 user	0m0.552s
 sys	0m0.002s
 
+----- go build parse-split.go  && time ./parse-split
+
+real	0m4.520s
+user	0m4.526s
+sys	0m0.254s
+
 ----- javac parse_fair.java && time java parse_fair
 
 real	0m6.517s
