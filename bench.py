@@ -6,10 +6,12 @@ cmds = [
     "javac parse_fair.java && time java parse_fair",
     "go build parse-fair.go && time ./parse-fair",
     "time pypy -S parse-fair.py",
+    "time php parse-fair.php",
+    "time node parse-fair.js",
     "time python -S parse-fair.py",
     "time python3 -S parse-fair.py",
-    "time node parse-fair.js",
 ]
+
 for n in range(5):
     for cmd in cmds:
         print("\n-----", cmd)
