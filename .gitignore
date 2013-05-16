@@ -4,3 +4,4 @@ parse-fair
 .idea/
 *.iml
 *.beam
+bin/*
