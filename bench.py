@@ -9,6 +9,7 @@ cmds = [
     "time python -S parse-fair.py",
     "time python3 -S parse-fair.py",
     "time node parse-fair.js",
+    "erlc parse_fair.erl && time erl -s parse_fair -s init stop -noshell",
 ]
 for n in range(5):
     for cmd in cmds:
