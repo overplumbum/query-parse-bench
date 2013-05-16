@@ -1,47 +1,59 @@
 ----- gcc  -O3 parse-strpos.c -o bin/parse-strpos.c.out && time ./bin/parse-strpos.c.out
 
-real	0m0.559s
-user	0m0.554s
+real	0m0.556s
+user	0m0.552s
 sys	0m0.002s
 
 ----- javac parse_fair.java && time java parse_fair
 
-real	0m6.638s
-user	0m6.604s
-sys	0m0.391s
+real	0m6.517s
+user	0m6.698s
+sys	0m0.374s
 
 ----- go build parse-fair.go && time ./parse-fair
 
-real	0m8.767s
-user	0m8.788s
-sys	0m0.566s
+real	0m8.784s
+user	0m8.813s
+sys	0m0.551s
 
 ----- time pypy -S parse-fair.py
 
-real	0m11.795s
-user	0m9.621s
-sys	0m0.077s
+real	0m9.769s
+user	0m9.734s
+sys	0m0.032s
 
 ----- time php parse-fair.php
 
-real	0m15.502s
-user	0m15.480s
-sys	0m0.019s
+real	0m15.639s
+user	0m15.499s
+sys	0m0.021s
+
+----- time perl parse-split.pl
+
+real	0m44.867s
+user	0m44.836s
+sys	0m0.027s
 
 ----- time node parse-fair.js
 
-real	1m21.955s
-user	1m22.084s
-sys	0m0.426s
+real	1m23.736s
+user	1m23.866s
+sys	0m0.472s
 
 ----- time python -S parse-fair.py
 
-real	1m22.369s
-user	1m21.862s
-sys	0m0.044s
+real	1m24.856s
+user	1m24.511s
+sys	0m0.071s
 
 ----- time python3 -S parse-fair.py
 
-real	1m23.119s
-user	1m23.068s
-sys	0m0.048s
+real	1m26.101s
+user	1m26.014s
+sys	0m0.065s
+
+----- time perl parse-fair.pl
+
+real	2m31.086s
+user	2m30.809s
+sys	0m0.149s

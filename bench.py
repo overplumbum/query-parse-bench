@@ -7,12 +7,14 @@ cmds = [
     "go build parse-fair.go && time ./parse-fair",
     "time pypy -S parse-fair.py",
     "time php parse-fair.php",
+    "time perl parse-split.pl",
     "time node parse-fair.js",
     "time python -S parse-fair.py",
     "time python3 -S parse-fair.py",
+    "time perl parse-fair.pl",
 ]
 
-for n in range(5):
-    for cmd in cmds:
+for n in range(1):
+    for cmd in cmds[-1:]:
         print("\n-----", cmd)
         check_call(cmd, shell=True)
