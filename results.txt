@@ -1,0 +1,41 @@
+----- gcc  -O3 parse-strpos.c -o bin/parse-strpos.c.out && time ./bin/parse-strpos.c.out
+
+real	0m0.560s
+user	0m0.556s
+sys	0m0.002s
+
+----- javac parse_fair.java && time java parse_fair
+
+real	0m6.232s
+user	0m6.541s
+sys	0m0.228s
+
+----- go build parse-fair.go && time ./parse-fair
+
+real	0m8.767s
+user	0m8.798s
+sys	0m0.555s
+
+----- time pypy -S parse-fair.py
+
+real	0m9.672s
+user	0m9.631s
+sys	0m0.038s
+
+----- time python -S parse-fair.py
+
+real	1m23.099s
+user	1m22.449s
+sys	0m0.058s
+
+----- time python3 -S parse-fair.py
+
+real	1m23.564s
+user	1m23.505s
+sys	0m0.041s
+
+----- time node parse-fair.js
+
+real	1m22.585s
+user	1m22.726s
+sys	0m0.425s

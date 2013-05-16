@@ -1,0 +1,5 @@
+*.class
+parse-fair
+*.pyc
+.idea/
+*.iml
