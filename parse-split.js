@@ -8,7 +8,7 @@ for (var i = 3000000; i > 0; i--) {
     var dt, provider, protocol;
     var args = 3;
 
-    for (k in pairs) {
+    for (var k = 0; k < pairs.length; k++) {
         var kv = pairs[k].split("=", 2);
         switch (kv[0]) {
             case "dt":

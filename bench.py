@@ -25,6 +25,9 @@ cmds = [
     ("perl", "fair",   "true", ["perl", "parse-fair.pl"]),
 ]
 
+if len(sys.argv) == 3:
+    cmds = filter(lambda cmd: cmd[0] == sys.argv[1] and cmd[1] == sys.argv[2], cmds)
+
 methods = {}
 runners = {}
 

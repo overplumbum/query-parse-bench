@@ -4,7 +4,7 @@
 <tr><td>py2</td><td>84.4</td><td>21.1</td><td>-</td></tr>
 <tr><td>py3</td><td>84.4</td><td>20.5</td><td>-</td></tr>
 <tr><td>php</td><td>15.6</td><td>20.5</td><td>-</td></tr>
-<tr><td>node</td><td>82.2</td><td>9.9</td><td>-</td></tr>
+<tr><td>node</td><td>82.2</td><td>7.4</td><td>-</td></tr>
 <tr><td>go</td><td>8.9</td><td>4.5</td><td>-</td></tr>
 <tr><td>java</td><td>6.3</td><td>4.4</td><td>-</td></tr>
 <tr><td>pypy</td><td>10.0</td><td>3.8</td><td>-</td></tr>
