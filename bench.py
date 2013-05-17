@@ -23,6 +23,8 @@ cmds = [
     ("py2",  "fair",   "true", ["python", "-S", "parse-fair.py"]),
     ("py3",  "fair",   "true", ["python3", "-S", "parse-fair.py"]),
     ("perl", "fair",   "true", ["perl", "parse-fair.pl"]),
+    ("erlang", "split", "erlc parse_split.erl", ["erl", "-noshell", "-s", "parse_split",
+                                                 "-s", "init", "stop"])
 ]
 
 if len(sys.argv) == 3:

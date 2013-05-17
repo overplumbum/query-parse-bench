@@ -3,4 +3,5 @@ parse-fair
 *.pyc
 .idea/
 *.iml
+*.beam
 bin/*
