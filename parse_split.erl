@@ -2,9 +2,7 @@
 %% sudo apt-get install erlang
 %% erlc parse_fair.erl && time erl -s parse_fair -s init stop -noshell
 %%
-%% разбор query string реализовал самостоятельно чисто из интереса.
-%%
--module(parse_fair).
+-module(parse_split).
 -export([start/0]).
 
 -define(FIELDS_TO_EXTRACT, [<<"h">>, <<"p">>]).
@@ -22,11 +20,18 @@ parse_n_times(Line, N) ->
     parse_n_times(Line, N - 1).
 
 parse(Line) ->
-    UrlPos = skip_spaces(Line, 6, 0),
-    QSPos = find_query_string(Line, UrlPos),
-    Pairs = parse_qs(Line, QSPos),
-    _Protocol = proplists:get_value(<<"p">>, Pairs),
-    _Provider = proplists:get_value(<<"h">>, Pairs).
+    UrlPos = skip_spaces(Line, 6, 0),           % move to 6'th space
+    QSPos = find_query_string(Line, UrlPos),    % move to "?"
+    Pairs = parse_qs(Line, QSPos),              % split querystring (no unescape)
+    Protocol = proplists:get_value(<<"p">>, Pairs),
+    Provider = proplists:get_value(<<"h">>, Pairs),
+    Dt = erlang:list_to_integer(
+           erlang:binary_to_list(
+             proplists:get_value(<<"dt">>, Pairs))),
+    case Dt > 500 of
+        true -> io:format("~p ~p ~p~n", [Protocol, Provider, Dt]);
+        _ -> ok
+    end.
     %% io:format("~p ~p~n~p~n~p~n~p~n", [UrlPos, QSPos, Pairs, Protocol, Provider]).
 
 skip_spaces(_, 0, Offset) ->
